@@ -1,3 +1,6 @@
+// This problem can be solved using many methods like brute force, prefix sum, Kadane's Algorithm, etc.
+// The below is the solution using Kadane's Algorithm.
+
 class Solution {
     public int maxSubArray(int[] nums) {
         int sum = 0;
@@ -8,7 +11,7 @@ class Solution {
             if(sum < 0){
                 sum = 0;
             }
-            max = Math.max(max, sum);
+            max = Math.max(max, sum);  
         }
 
         if(max == 0){
@@ -17,7 +20,7 @@ class Solution {
                 max = Math.max(max, nums[i]);
             }
         }
-        return max;
+        return max;    //return maximum subarray sum
 
        
         
